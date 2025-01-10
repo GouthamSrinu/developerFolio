@@ -1,13 +1,13 @@
-import React, {useContext} from "react";
-import {Fade} from "react-reveal";
+import React, { useContext } from "react";
 import emoji from "react-easy-emoji";
-import "./Greeting.scss";
+import { Fade } from "react-reveal";
 import landingPerson from "../../assets/lottie/landingPerson";
+import Button from "../../components/button/Button";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import { greeting, illustration } from "../../portfolio";
+import "./Greeting.scss";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -43,7 +43,7 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <a
                     href={require("./resume.pdf")}
-                    download="Resume.pdf"
+                    download="resume.pdf"
                     className="download-link-button"
                   >
                     <Button text="Download my resume" />
